@@ -19,7 +19,15 @@ const Fetchnews = () => {
                 {news.map((value)=>{
                     return(
                         <div className="flex">
-                            
+                        {/* <div className="border-spacing-1"> */}
+                            <img src={value.urlToImage} alt=''/>
+                        {/* </div> */}
+                           <div className="text-3xl">
+                                {value.title}
+                            </div> 
+                            <div className="text-xl">
+                                {value.description}
+                            </div>
                         </div>
                     )
                 })}
