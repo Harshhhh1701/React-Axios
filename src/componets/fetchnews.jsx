@@ -12,22 +12,24 @@ const Fetchnews = () => {
     }
     return (
         <>
-            <div className="flex">
+            <div className="flex flex-col">
                 <button className='bg-blue-300 text-black text-xl p-3 rounded-md' onClick={fetchNews}>Fetch news </button>
             </div>
-            <div className="flex">
+            <div className="flex flex-col">
                 {news.map((value)=>{
                     return(
-                        <div className="flex">
+                        <div className="flex ">
                         {/* <div className="border-spacing-1"> */}
-                            <img src={value.urlToImage} alt=''/>
+                            <img src={value.urlToImage} className="w-1/4" alt=''/>
                         {/* </div> */}
+                           <div className="flex flex-col">
                            <div className="text-3xl">
                                 {value.title}
                             </div> 
                             <div className="text-xl">
                                 {value.description}
                             </div>
+                           </div>
                         </div>
                     )
                 })}
